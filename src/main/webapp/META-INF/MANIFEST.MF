@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven
+Built-By: ali
+Build-Jdk: 1.7.0_06
+Specification-Title: tez-anadolu-2013
+Specification-Version: 1.0-SNAPSHOT
+Implementation-Title: tez-anadolu-2013
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: tr.anadolu.edu.ceng.bim444.tez
+Ignore-Scanning-Packages: org.springframework,org.apache,org.hibernate
+ ,org.codehaus
+

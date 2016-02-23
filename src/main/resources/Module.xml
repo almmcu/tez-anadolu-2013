@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<import resource="database/Datasource.xml"/>
+	<import resource="people/People.xml"/>
+    <import resource="exam/Exam.xml"/>
+    <import resource="question/Question.xml"/>
+    <import resource="answer/Answer.xml"/>
+	
+</beans>
