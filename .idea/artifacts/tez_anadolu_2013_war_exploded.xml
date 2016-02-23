@@ -51,6 +51,10 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.4" />
           <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.6.4" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.7.1" />
+          <element id="library" level="project" name="Maven: org.json:json:20160212" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.0-alpha4" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.0-beta1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
