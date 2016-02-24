@@ -8,52 +8,25 @@ package tr.anadolu.edu.ceng.bim444.tez.student.answers.infrostructure.model;
 public class Answer {
 
 
-    private String id ;
-    private  String ingilzce  ;
-    private  String turkce  ;
-    private String erisim ;
-    private String status ;
+    private String accelerometer ;
+    private  String timeInterval  ;
 
     public Answer() {
     }
 
-    public String getIngilzce() {
-        return ingilzce;
+    public String getAccelerometer() {
+        return accelerometer;
     }
 
-    public void setIngilzce(String ingilzce) {
-        this.ingilzce = ingilzce;
+    public void setAccelerometer(String accelerometer) {
+        this.accelerometer = accelerometer;
     }
 
-    public String getTurkce() {
-        return turkce;
+    public String getTimeInterval() {
+        return timeInterval;
     }
 
-    public void setTurkce(String turkce) {
-        this.turkce = turkce;
-    }
-
-    public String getErisim() {
-        return erisim;
-    }
-
-    public void setErisim(String erisim) {
-        this.erisim = erisim;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public void setTimeInterval(String timeInterval) {
+        this.timeInterval = timeInterval;
     }
 }

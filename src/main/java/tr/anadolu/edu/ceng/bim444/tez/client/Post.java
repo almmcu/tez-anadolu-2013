@@ -28,18 +28,14 @@ public class Post {
     public static void main(String[] args) {
         Post post = new Post();
         Word word = new Word();
-        word.setErisim("erisim");
-        word.setId("id");
-        word.setIngilzce("ingilizce");
-        word.setStatus("status");
-        word.setTurkce("turkce");
+        word.setTimeInterval("erisim");
+        word.setAccelerometer("id");
+
 
         Word word2 = new Word();
-        word2.setErisim("erisim2");
-        word2.setId("id2");
-        word2.setIngilzce("ingilizce2");
-        word2.setStatus("status2");
-        word2.setTurkce("turkce2");
+        word2.setAccelerometer("erisim2");
+        word2.setTimeInterval("id2");
+        ;
         ArrayList<Word> wordArrayList = new ArrayList<Word>();
         wordArrayList.add(word);
         wordArrayList.add(word2);
@@ -63,30 +59,9 @@ public class Post {
             HttpPost httpPost = new HttpPost(url);
 
             String json = "";
-
-            // 3. build jsonObject
-            JSONArray jsonArray = new JSONArray();
-Words wordss = new Words();
+            Words wordss = new Words();
             wordss.setWords(words);
-            for (Word word:words
-                 ) {
-                JSONObject jsonObject = new JSONObject();
-                jsonObject.accumulate("ingilzce", word.getIngilzce());
-                jsonObject.accumulate("turkce", word.getTurkce());
-                jsonObject.accumulate("erisim", word.getErisim());
-                jsonObject.accumulate("status", word.getStatus());
-                // 4. convert JSONObject to JSON to String
-                jsonArray.put(jsonObject.toString());
-
-
-            }
-            json = jsonArray.toString();
-            json = "{" +
-                    "  \"words\" : " + json + "}";
-             json = new Gson().toJson(wordss);
-            // ** Alternative way to convert Person object to JSON string usin Jackson Lib
-            // ObjectMapper mapper = new ObjectMapper();
-            // json = mapper.writeValueAsString(person);
+            json = new Gson().toJson(wordss);
 
             // 5. set json to StringEntity
             StringEntity se = new StringEntity(json, HTTP.UTF_8);

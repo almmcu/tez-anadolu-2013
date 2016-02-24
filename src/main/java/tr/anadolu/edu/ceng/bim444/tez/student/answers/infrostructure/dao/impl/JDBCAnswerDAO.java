@@ -52,37 +52,37 @@ public class JDBCAnswerDAO implements AnswerDAO {
                 "(" +
                 "?, ?, ?, ?" +
                 ")";
-        ArrayList<AnswerPosted> answerPostedList;
+        ArrayList<Answer> answerPostedList;
         answerPostedList = answers.getAnswers();
         Connection conn = null;
         Answer answer = new Answer();
-        answer.setsTcNo(sid);
-        answer.seteId(examid);
+        answer.setTimeInterval(sid);
+        answer.setAccelerometer(examid);
         try {
             conn = dataSource.getConnection();
             for (int i = 0; i < answerPostedList.size() - 1; i++) {
 
                 PreparedStatement psdelete = conn.prepareStatement(sqlDelete);
-                psdelete.setString(1, answerPostedList.get(i).getSoruId());
-                psdelete.setString(2, answer.getsTcNo());
-                psdelete.setString(3, answer.geteId());
+                psdelete.setString(1, answerPostedList.get(i).getAccelerometer());
+                psdelete.setString(2, answer.getTimeInterval());
+                psdelete.setString(3, answer.getAccelerometer());
                 psdelete.executeUpdate();
                 psdelete.close();
 
 
                 PreparedStatement ps = conn.prepareStatement(sql);
-                ps.setString(1, answerPostedList.get(i).getSoruId());
-                ps.setString(2, answer.getsTcNo());
-                ps.setString(3, answer.geteId());
-                if (answerPostedList.get(i).getCevap().startsWith(":-:image:-:") ) {
+                ps.setString(1, answerPostedList.get(i).getAccelerometer());
+                ps.setString(2, answer.getAccelerometer());
+                ps.setString(3, answer.getAccelerometer());
+                if (answerPostedList.get(i).getAccelerometer().startsWith(":-:image:-:") ) {
                     logger.debug(":-:image:-: ile baslayan cevap var ");
-                    String name = answer.getsTcNo().concat("-").concat(answer.geteId()).concat("-").concat(answerPostedList.get(i).getSoruId());
-                    DecodeImage decodeImage = new DecodeImage(answerPostedList.get(i).getCevap(), name);
+                    String name = answer.getAccelerometer().concat("-").concat(answer.getAccelerometer()).concat("-").concat(answerPostedList.get(i).getAccelerometer());
+                    DecodeImage decodeImage = new DecodeImage(answerPostedList.get(i).getAccelerometer(), name);
 
                     ps.setString(4, decodeImage.decodeImage());
 
                 } else {
-                    ps.setString(4, answerPostedList.get(i).getCevap());
+                    ps.setString(4, answerPostedList.get(i).getAccelerometer());
 
 
                 }
